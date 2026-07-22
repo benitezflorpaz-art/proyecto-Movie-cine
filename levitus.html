@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leviticus </title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+     <header>
+    <div class="logo">  <!--Este div contiene un link a la misma pagina para que el usuario pueda actualizar -->
+         <a href="index.html"> <h1 id="titulo-cine">Movie Night</h1> </a>   
+    </div>
+
+
+    <nav>    <!--Este parte del  Menu de Navegaccion ocupara el espacio de la izquierda -->
+        <a href="#CARTELERA"> CARTELERA ▼ </a>
+        <a href="combos.html">CONFITERIA</a>
+        <a href="contacto.html">CONTACTOS</a>
+
+    </nav>
+
+    <button id="Menu-pequeño"> <!--Este menu aparecerá cuando las  pantallas sean mas pequeñas -->
+            <img src="img/menu-peque.png" alt="">
+        </button>
+
+
+<div class="derecha"><!--Este parte del  Menu ocupara el espacio de la derecha-->
+        <a href="blog.html">Blog</a>
+        <a href="nosotras.html">Nosotras</a>
+    </div>
+
+</header>
+
+
+<div id="Principales"><!--Este div contiene a todos los link, al que van a poder haceder cuando se precione el boton de menu pequeño    -->
+    <a href="#CARTELERA">Cartelera</a>
+    <a href="combos.html">Confitería</a>
+    <a href="contacto.html">Contactos</a>
+    <a href="blog.html">Blog</a>
+    <a href="nosotras.html">Nosotras</a>
+</div>
+
+ <main class="Contenido-1">
+
+    <h1>HORARIOS</h1>
+
+<section class="pelicula">
+
+    <div class="poster">
+         <img onclick="abrirModal('https://www.youtube.com/embed/dnHdIZ6VMTw?si=J4j3kDHP4dJ5dOWt')" src="img/leviticus.jfif" alt="Poster de Leviticus">
+    </div>
+
+
+    <div class="info">
+
+        <h1>Leviticus</h1>
+
+        <div class="datos-peliculas">
+            <p><strong>Género:</strong> Terror sobrenatural, thriller psicológico y romance coming-of-age </p>
+            <p><strong>Duración:</strong> 108 minutos</p>
+            <p><strong>Clasificación:</strong> </p>
+        </div>
+
+        <h4>Sinopsis</h4>
+        <p>
+           La historia sigue a Naim, un adolescente que se muda con su madre a un suburbio profundamente religioso de Australia. Al descubrirse su orientación sexual dentro de esta comunidad represiva, el grupo religioso local realiza un oscuro ritual con la intención de "curarlo"
+        </p>
+
+<h4>Reparto principal</h4>
+<ul class="reparto">
+    <li>Joe Bird como Naim Reid</li>
+    <li>Stacy Clausen como Ryan</li>
+    <li>Mia Wasikowska como Arlene Reid</li>
+</ul>
+
+    </div>
+</section>
+
+
+<section class="horarios">
+
+<h1>FUNCIONES</h1s>
+
+<h4> 2D Doblada</h4>
+    <h3><strong> [15:00 hs]    [16:10 hs]    [17:15 hs] </strong></h3>
+
+
+<h4> 3D Sustitulada</h4>
+    <h3><strong> [18:30 hs]    [20:00  hs]  </strong></h3>
+
+
+  <button class="button-de-peli" onclick="abrirModalBoleto()">Ver Mas</button>
+        
+</section>
+
+
+
+<div id="modal" class="modal">
+    <div class="contenido-modal">
+        <span class="close" onclick="cerrarModal()">&times;</span>
+        <iframe
+     id="trailer"
+            src=""
+            title="Tráiler"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen>
+</iframe>
+    </div>
+</div>
+
+<!--Modal para que el usuario pueda realizar la compara del boleto de manera digital -->
+
+
+<div id= "modal-boleto" class="modal"> <!--Div 1  oscurece la pantalla-->
+    <div class="contenido"> <!-- Div 2 aparece la pantalla blanca-->
+        <span onclick="cerrarModalBoleto()" class="close">&times;</span> <!--Aqui llama a la funcion cerrarModal y &times es solo para que cuando apriete la X se cierre-->
+
+        <h1>¡Compra tus entradas aqui¡</h1>
+        
+    <label for="formato">SELECCIONE UN FORMATO</label><br>
+    <select id="formato">
+        <option value="2D">2D</option>
+        <option value="3D">3D</option>
+        <option value="PREMIER">PREMIER</option>
+    </select>
+
+    <label for="idioma">SELECCIONE UN IDIOMA</label><br>
+    <select id="idioma">
+        <option value="doblada">Doblada</option>
+        <option value="subtitulada">Subtitulada</option>
+    </select>
+
+
+    <label for="horario">SELECCIONE UN HORARIO</label><br>
+    <select id="horario">
+        
+    </select>
+
+    <label>PRECIO</label><br>
+
+<p><strong>Precio:</strong> <span id="precio"></span></p>
+
+
+      <button class="button-de-peli" onclick=" comprarBoleto()">COMPRAR BOLETO</button> 
+    </div>
+</div>
+
+
+</main>
+
+   
+<footer>
+
+     <div class="redes-sociales">
+          <h1>SEGUINOS</h1>
+
+        <div class="iconos">
+            <a href="">
+                <img width="48" height="48" src="https://img.icons8.com/fluency/48/facebook-new.png" alt="Visítanos en Facebook"/></a>
+            </a>
+
+            <a href="">
+               <img width="48" height="48" src="https://img.icons8.com/fluency/48/instagram-new.png" alt="Visítanos en Instagram"/>
+            </a>
+
+            <a href="">
+               <img width="48" height="48" src="https://img.icons8.com/fluency/48/twitterx--v2.png" alt="Visítanos en Twitter"/>
+            </a>
+
+            <a href="">
+                <img width="48" height="48" src="https://img.icons8.com/fluency/48/tiktok.png" alt="Visítanos en TikTok"/>
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="footer-contenido">
+        <div class="contacto">
+
+            <h3>Contacto</h3>
+
+            <p> Dr. Paseo La Galeria, Av. Sta. Teresa casi, Asunción 001410</p>
+
+            <p> +595 981 002 456</p>
+
+            <p>✉ contacto@cinemar.com</p>
+
+            <p> Lunes a Domingo
+            10:00 a 22:00</p>
+
+        </div>
+
+
+     <div class="Mapa">
+        <h2>Ubicación</h2>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2973.443805742939!2d-57.566022125414094!3d-25.2843543271434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x945da61555555555%3A0x78d26ef57f8116a1!2sPaseo%20La%20Galer%C3%ADa!5e1!3m2!1ses-419!2spy!4v1783472205844!5m2!1ses-419!2spy"width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+     </div>
+
+</footer>
+
+
+<script src="js/script.js"></script>
+
+
+
+
+</body>
+</html>
